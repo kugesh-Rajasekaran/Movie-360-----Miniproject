@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <p id="par"></p>
+        <script>
+            function fuun(){
+           // var nuum=Request.QueryString["quer"] ;
+           var a=location.search.substring(1).split("&");
+var b=a[0].split("=");
+ let l=unescape(b[1]);
+
+ fetch('http://www.omdbapi.com/?t='+l+'&apikey=f64130b1')
+   .then((res) =>res.json())
+   .then((data) =>{
+
+     
+        let op='<div>';
+    
+     
+           op +=`
+            <h3>${data.Plot}</h3>
+           <br><br><br><br>
+            
+            `;
+         
+    
+   op+='</div>'
+       document.getElementById('par').innerHTML=op;
+   })
+   .catch((error)=>console.log(error))
+}
+            
+            fuun();
+            
+            </script>
+        </body>
+</html>

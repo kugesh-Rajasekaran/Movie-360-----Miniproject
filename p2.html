@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <style>
+        * {
+  box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    height: 90%;
+
+  flex: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+    display: flex;
+    float: left;
+    height: 90%;
+  width: 25%;
+ 
+}       
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  width: 100%;
+}
+        </style>
+    </head>
+    <body>
+        <div id="par"></div>
+    <div id="lasfun"></div>
+        <script>
+              var count=1;
+      //   document.getElementById('listall').addEventListener('click', fun);
+      function last(){
+count++;
+fun();
+       }
+                function fun(){
+                    var a=location.search.substring(1).split("&");
+var b=a[0].split("=");
+ let l=unescape(b[1]);
+                fetch('http://www.omdbapi.com/?s='+l+'&page='+count+'&apikey=f64130b1')
+   .then((res) =>res.json())
+   .then((data) =>{
+     var len=data.Search.length;
+     var quer;
+        let op='<div class="row">';
+    
+     
+         for(let i=0;i<10;i++){
+           op +=`
+           <div class="column">
+            <a href="p3.html?quer=${data.Search[i].Title}">
+            <img src="${data.Search[i].Poster}"  style="height:90%;width:100%;">
+            <h3>${data.Search[i].Title}</h3>
+            </a>
+           <br><br><br><br>
+            </div>
+            `;
+         }
+    
+   op+='</div>'
+   op+=`<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>`;
+    op+=`<button onclick="last()" class="button">Show More</button>`;
+       document.getElementById('par').innerHTML=op;
+       //document.getElementById('lasfun').innerHTML=lq;
+
+   })
+   .catch((error)=>console.log(error))
+}
+       fun(); 
+  
+        </script>
+    </body>
+</html>
