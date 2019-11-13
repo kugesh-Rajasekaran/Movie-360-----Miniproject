@@ -39,27 +39,43 @@
     <body>
         <div id="par"></div>
     <div id="lasfun"></div>
-        <script>
+        <script>              /////////////////////////////////////////////////////////////////////////
+var scrpos;
               var count=1;
-      //   document.getElementById('listall').addEventListener('click', fun);
+           var op=[];
+              var arrct=0;
+            
+              window.addEventListener('scroll',function(e){
+scrpos=window.scrollY;
+              });
+      //////////////////////////////////////////////////////////////////////
       function last(){
+        arrct++;
 count++;
+sessionStorage.setItem("countnum", count);
+
 fun();
        }
+
+       //////////////////////////////////////////////////////////////////////
                 function fun(){
+                // window.scrollTo(0,scrpos);
+              count=sessionStorage.getItem("countnum");
+              console.log(count);
                     var a=location.search.substring(1).split("&");
 var b=a[0].split("=");
  let l=unescape(b[1]);
+ 
                 fetch('http://www.omdbapi.com/?s='+l+'&page='+count+'&apikey=f64130b1')
    .then((res) =>res.json())
    .then((data) =>{
      var len=data.Search.length;
      var quer;
-        let op='<div class="row">';
+        op[arrct]='<div class="row">';
     
      
          for(let i=0;i<10;i++){
-           op +=`
+           op[arrct] +=`
            <div class="column">
             <a href="p3.html?quer=${data.Search[i].Title}">
             <img src="${data.Search[i].Poster}"  style="height:90%;width:100%;">
@@ -70,11 +86,12 @@ var b=a[0].split("=");
             `;
          }
     
-   op+='</div>'
-   op+=`<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>`;
-    op+=`<button onclick="last()" class="button">Show More</button>`;
+   op[arrct]+='</div>'
+   op[arrct]+=`<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>`;
+    
+    var but=`<button onclick="last()" class="button">Show More</button>`;
        document.getElementById('par').innerHTML=op;
-       //document.getElementById('lasfun').innerHTML=lq;
+       document.getElementById('par').innerHTML+=but;
 
    })
    .catch((error)=>console.log(error))
