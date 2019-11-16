@@ -1,36 +1,56 @@
 <html>
     <body>
-        <p id="par"></p>
-        <script>
-            function fuun(){
-           // var nuum=Request.QueryString["quer"] ;
-           var a=location.search.substring(1).split("&");
-var b=a[0].split("=");
- let l=unescape(b[1]);
+        <link rel="stylesheet" href="css3.css">
+        <div class="full">
+        <div class="bg">
+<div id="sub">
 
- fetch('http://www.omdbapi.com/?t='+l+'&apikey=f64130b1')
-   .then((res) =>res.json())
-   .then((data) =>{
+        <h1 style="color:rgb(37, 127, 216);"><u>SELECTED MOVIE</u> </h1>  <div id="im"></div>
+        <div id="bg-modal1">
+          <div id="modal-contents1">
+              <div id="close1">+</div>
+              <div id="movieDetails"></div>
+</div>
+</div>
 
-     
-        let op='<div>';
-    
-     
-           op +=`
-            <h3>${data.Plot}</h3>
-           <br><br><br><br>
-            
-            `;
-         
-    
-   op+='</div>'
-       document.getElementById('par').innerHTML=op;
-   })
-   .catch((error)=>console.log(error))
-}
-            
-            fuun();
-            
-            </script>
+<div id="bg-modal2">
+    <div id="modal-contents2">
+        <div id="close2">+</div>
+        <div id="plot"></div>
+</div>
+</div>
+
+<div id="bg-modal3">
+    <div id="modal-contents3">
+        <div id="close3">+</div>
+        <div id="rating"></div>
+</div>
+</div>
+
+<div id="bg-modal4">
+    <div id="modal-contents4">
+        <div id="close4">+</div>
+        <div id="booking"></div>
+</div>
+</div>
+
+
+</div>
+<div style="color:rgb(37, 127, 216);" id="butt">
+  <h1><u>OPTIONS</u></h1>
+<button onclick="fun1()" class="button button1">movieDetails</button>
+<br>
+
+<button onclick="fun2()" class="button button2">plot</button>
+
+<br>
+<button onclick="fun3()" class="button button3">rating</button>
+<br>
+<button onclick="fun4()" class="button button4">booking</button>
+<br>
+</div>
+</div>
+<script src="js3.js">   </script>
+
         </body>
 </html>
