@@ -1,0 +1,298 @@
+body, html 
+  {
+    height: 100%;
+    margin: 0;
+  }
+  
+.bg
+  {
+    /* The image used */
+    background-image: url("photo-1529753253655-470be9a42781.jfif");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+ 
+#sub 
+  { 
+   float: left;
+    background:Red; 
+    width:40%; 
+    height:2px; 
+  }
+
+#butt
+  { 
+    float:left;  
+    background:rgb(37, 119, 187); 
+    width:30%; 
+    height:2px; 
+  } 
+
+
+/*for button animation*/
+.button
+  {
+    background-color: lightslategrey; 
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  /*when our cursor hover in button1 area*/
+.button1:hover                                  
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(37, 119, 187);
+  }
+  
+.button1 
+  {
+    background-color: rgb(37, 119, 187);
+    color: white;
+  }
+  
+  /*when our cursor hover in button2 area*/
+  .button2:hover 
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(37, 119, 187);
+  }
+  
+.button2 
+  {
+    background-color: rgb(37, 119, 187);
+    color: white;
+  }
+  
+  /*when our cursor hover in button3 area*/
+.button3:hover 
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(37, 119, 187);
+  }
+  
+.button3 
+  {
+    background-color: rgb(37, 119, 187);
+    color: white;
+  }
+  
+  /*when our cursor hover in button4 area*/
+.button4:hover 
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(37, 119, 187);
+  }
+  
+.button4 
+  {
+    background-color: rgb(37, 119, 187);
+    color: white;
+  }
+
+.button5 
+  {
+    background-color: red;
+    color: white;
+  }
+  
+  /*when our cursor hover in button5 area*/
+.button5:hover 
+  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid red;
+  }
+
+
+#bg-modal1 
+  {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+    align-items: center;
+    float:left;
+  }
+
+#modal-contents1 
+  {
+	height: 500px;
+	width: 800px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+  }
+
+#close1 
+  {
+  position:absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color:red;
+	transform: rotate(45deg);
+	cursor: pointer;
+  &:hover
+   {
+		color: #666;
+	 }
+  }
+
+  
+#bg-modal2
+   {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+    align-items: center;
+    float:left;
+  }
+            
+#modal-contents2 
+  {
+	height: 500px;
+	width: 800px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+  }
+
+#close2 
+   {
+  position:absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color:red;
+	transform: rotate(45deg);
+	cursor: pointer;
+  &:hover 
+    {
+		color: #666;
+	  }
+   }
+
+  
+#bg-modal3 
+{
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+
+  #modal-contents3 
+  {
+	height: 500px;
+	width: 800px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+  }
+  #close3
+  {
+  position:absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color:red;
+	transform: rotate(45deg);
+	cursor: pointer;
+  &:hover 
+   {
+		color: #666;
+	 }
+  }
+
+
+  
+ #bg-modal4 
+ {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+ }
+ #modal-contents4 
+ {
+	height: 500px;
+	width: 800px;
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+ }
+ #close4
+ {
+  position:absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color:red;
+	transform: rotate(45deg);
+	cursor: pointer;
+  &:hover 
+   {
+		color: #666;
+	 }
+  }
+
+
+ @media screen and (max-width:959px)
+ {
+   .bg
+   {
+    width: 100%;
+   }
+ }
+
+ @media screen and (max-width:650px)
+ {
+   .bg
+   {
+    width: 100%;
+   }
+ }
+
+    

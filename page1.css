@@ -1,0 +1,52 @@
+body 
+  {
+    background-image: url("photo-1529753253655-470be9a42781.jfif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+.container
+  {
+    width: 100%;
+    margin: 0px auto;
+  }
+
+#subb
+  {
+    background-color: blue; /* Blue */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  /*when cursor come into*/
+#subb:hover 
+  {
+    background-color: red; 
+    color: black; 
+    border: 2px solid #4CAF50;
+  }
+  
+/*css  media queries for screen adjustment*/
+@media screen and (max-width:959px)
+  {
+    .container
+    {
+      width: 100%;
+    }
+  }
+
+@media screen and (max-width:650px)
+  {
+    .container
+    {
+      width: 100%;
+    }
+  }
