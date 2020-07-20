@@ -1,6 +1,6 @@
 # Movie-360
 
-HOSTED LINK- https://kugesh-rajasekaran.github.io/MovieWiki/page1.html
+HOSTED LINK- https://kugesh-rajasekaran.github.io/Movie-360-----Miniproject/page1.html
 
 With this application we can get any movie related information with the movie name or relevant keyword.
 
